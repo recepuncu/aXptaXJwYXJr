@@ -1,4 +1,5 @@
-<footer class="p-t-20">
+</div><!-- ./site-content -->
+<footer class="main-footer p-t-20">
   <div class="container-fluid">
     <div class="row mobile-social-nav-row">
       <div class="col-xs-12 col-sm-8">
@@ -6,10 +7,13 @@
           <li><a href="https://www.facebook.com/izmirpark"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/facebook-icon-2.png"  alt="Facebook" longdesc="https://www.facebook.com/izmirpark" class="img-responsive" /></a></li>
           <li><a href="http://instagram.com/izmirpark"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram-icon-2.png"  alt="Instagram" longdesc="http://instagram.com/izmirpark" class="img-responsive" /></a></li>
           <li><a href="https://twitter.com/izmirpark"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/twitter-icon-2.png"  alt="Twitter" longdesc="https://twitter.com/izmirpark" class="img-responsive" /></a></li>
-          <li><a href="#">İzmir Park</a></li>
-          <li><a href="#">Bizden Haberler</a></li>
-          <li><a href="#">Basında İzmir Park</a></li>
-          <li><a href="#">İzmir Park'ta Yaşam</a></li>
+			<?php
+            if ( has_nav_menu( 'footer' ) ) :
+                wp_nav_menu( array(
+                    'theme_location' => 'footer'
+                ) );
+            endif; 
+            ?>          
         </ul>
       </div>
       <div class="col-xs-12 col-sm-4">
@@ -33,6 +37,7 @@
     </div>
   </div>
 </footer>
+<?php wp_footer(); ?>
 <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/bxslider/jquery.bxslider.min.js"></script> 

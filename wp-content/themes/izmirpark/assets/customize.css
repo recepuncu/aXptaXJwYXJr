@@ -1,30 +1,166 @@
-
 body {
 	font-family: 'Open Sans', sans-serif;
 }
-
 .bx-wrapper {
-    margin: 0 auto 20px;
+	margin: 0 auto 20px;
 }
-
 .bx-wrapper .bx-viewport {
-    -moz-box-shadow: 0 0 0 #ccc;
-    -webkit-box-shadow: 0 0 0 #ccc;
-    box-shadow: 0 0 0 #ccc;
+	-moz-box-shadow: 0 0 0 #ccc;
+	-webkit-box-shadow: 0 0 0 #ccc;
+	box-shadow: 0 0 0 #ccc;
 }
-
-footer {
+footer.main-footer {
 	background-color: #141414;
 }
-
+.bullet-left {
+	margin-right: 75px;
+}
+.bullet-right {
+	margin-left: 75px;
+}
+.etkinlik-afis-orta {
+	width: "415px";
+	height: "590px;"
+}
+.site-content {
+	min-height: 330px;
+}
+.footer-a, .footer-a:hover, .footer-a:active, .footer-a:focus {
+	color: #363636;
+	text-decoration: none;
+}
+div.mobile-social-nav-row {
+	padding-bottom: 5px;
+	border-bottom: solid 2px #363636;
+}
+div.footer-abone-ol {
+	border: solid 1px #363636;
+	padding: 3px;
+	margin-top: -10px;
+}
+div.footer-abone-ol input[type="text"] {
+	background-color: #141414;
+	border-color: #141414;
+}
+div.footer-abone-ol button, div.footer-abone-ol button:hover, div.footer-abone-ol button:active, div.footer-abone-ol button:focus {
+	background-color: #323030;
+	border-color: #323030;
+	color: #f5f5f5;
+}
+ul.mobile-social-nav {
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul.mobile-social-nav li {
+	float: left;
+	padding-right: 4px;
+	margin-top: 7px;
+}
+ul.mobile-social-nav li>a {
+	display: block;
+}
+ul.mobile-social-nav li>a:hover {
+	text-decoration: none;
+}
+ul.izmirpark-footer, ul.izmirpark-footer ul {
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul.izmirpark-footer li {
+	float: left;
+	padding-right: 20px;
+}
+ul.izmirpark-footer li>a {
+	display: block;
+	line-height: 26px;
+	font-size: 13px;
+	color: #ffffff;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+ul.izmirpark-footer li>a:hover {
+	text-decoration: none;
+}
+div.magaza-logo, div.magaza-logo>* {
+	text-align: center;
+}
+div.magaza-ozet, div.magaza-ozet>* {
+	display: block;
+    text-align: center;
+    white-space: nowrap;    
+}
+div.magaza-logo, div.magaza-logo img {
+	margin-left: auto;
+	margin-right: auto;
+}
+div.magaza-afis-orta {
+	background-color: #e8e9eb;
+	padding: 5px;
+	border: solid 1px #aba6a9;
+}
+.izmirpark-kategori-ana-sayfa ul {
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.izmirpark-kategori-ana-sayfa ul li {
+	float: left;
+	padding-right: 10px;
+}
+.izmirpark-kategori-ana-sayfa ul li>a {
+	display: block;
+	line-height: 94px;
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 600;
+}
+.izmirpark-kategori-ana-sayfa ul li>a:hover {
+	text-decoration: none;
+}
+.izmirpark-kategori-ana-sayfa ul li>a {
+	text-align: center;
+}
+.izmirpark-kategori-ana-sayfa ul li:nth-child(1)>a {
+	background-color: #ec008c;
+}
+.izmirpark-kategori-ana-sayfa ul li:nth-child(2)>a {
+	background-color: #ffcb08;
+}
+.izmirpark-kategori-ana-sayfa ul li:nth-child(3)>a {
+	background-color: #818181;
+}
+.izmirpark-kategori-ana-sayfa ul li:nth-child(4)>a {
+	background-color: #a6ce39;
+}
+.izmirpark-kategori-ana-sayfa ul li:nth-child(5)>a {
+	background-color: #54c5d0;
+}
+.panel-izmirpark .panel-title-izmirpark {
+	font-size: 18px;
+	font-weight: 600;
+}
 /**
 * PADDINGS
 */
 .p-0 {
 	padding: 0px;
 }
+.p-5 {
+	padding: 5px;
+}
 .p-r-0 {
 	padding-right: 0px;
+}
+.p-r-5 {
+	padding-right: 5px;
+}
+.p-l-5 {
+	padding-left: 5px;
 }
 .p-t-10 {
 	padding-top: 10px;
@@ -32,7 +168,6 @@ footer {
 .p-t-20 {
 	padding-top: 20px;
 }
-
 /**
 * MARGINS
 */
@@ -45,30 +180,25 @@ footer {
 .m-b-20 {
 	margin-bottom: 20px;
 }
+.m-t-0 {
+	margin-top: 0px;
+}
 .m-t-10 {
 	margin-top: 10px;
 }
-
-@media only screen and (max-width: 480px) {
-body {
-	padding-top: 69px;
+.m-t-20 {
+	margin-top: 20px;
 }
+.m-l-auto {
+	margin-left: auto;
 }
-
-@media only screen and (min-width: 480px) {
-body {
-	padding-top: 129px;
+.m-r-auto {
+	margin-right: auto;
 }
-.container-fluid {
-	padding-right: 50px;
-	padding-left: 50px;
-}
-
 /**
 * NAVBAR
 */
 .navbar-izmirpark {
-	height: 114px;
 	background-color: #e4e4e4;
 	border-color: #e7e7e7;
 	-webkit-border-radius: 0px;
@@ -76,22 +206,19 @@ body {
 	border-radius: 0px;
 }
 .navbar-izmirpark .navbar-header {
-	height: 114px;
-	margin-right: 20px;
+
 }
 .navbar-izmirpark .navbar-collapse {
-	margin-top: 50px;
+
 }
 .navbar-izmirpark .navbar-nav.navbar-right>li>a {
-	padding-left: 3px;
-	padding-right: 3px;
+
 }
 .navbar-izmirpark .navbar-nav>li>a {
 	color: #000000;
 	font-weight: 600;
 	background-color: #e4e4e4;
 	border-bottom: solid 3px #e4e4e4;
-	padding-bottom: 10px;
 }
 .navbar-izmirpark .navbar-nav>li>a:hover {
 	border-bottom: solid 3px #d1d1d1;
@@ -104,6 +231,4 @@ body {
 	font-weight: 600;
 	background-color: #e4e4e4;
 	border-bottom: solid 3px #000000;
-	padding-bottom: 10px;
-}
 }

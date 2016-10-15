@@ -40,11 +40,29 @@ if ( $ana_sayfa_slide_alt_query->have_posts() ){
 	endwhile;
 }
 
+//MAĞAZALAR
+$magazalar_args = array('post_type' => 'magaza', 'posts_per_page' => 48 );
+$magazalar_query = new WP_Query( $magazalar_args ); 
+$magazalar = array();
+if ( $magazalar_query->have_posts() ){
+	while ( $magazalar_query->have_posts() ) : $magazalar_query->the_post();
+		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+		$magazalar[] = array(
+			'caption'=> get_the_title(), 
+			'excerpt'=> get_the_excerpt(),
+			'thumbnail'=> $thumbnail ? $thumbnail[0] : null,
+			'thumbnail-s'=> get_the_post_thumbnail($post->ID, array(130, 130), array('class'=>'img-thumbnail')),
+			'url'=> get_post_permalink()
+		);		
+	endwhile;
+	wp_reset_postdata();
+}
+
 ?>
 <section>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-sm-8">
+      <div class="col-xs-12 col-sm-8 top-left">
         <div id="anasayfa-slide-ust" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
 			<?php foreach($ana_sayfa_slide_ust as $key => $slide){ ?>
@@ -62,11 +80,15 @@ if ( $ana_sayfa_slide_alt_query->have_posts() ){
           <a class="left carousel-control" href="#anasayfa-slide-ust" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Önceki</span> </a> <a class="right carousel-control" href="#anasayfa-slide-ust" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Sonraki</span> </a> </div>
       </div>
       <!-- carousel col -->
-      <div class="col-xs-12 col-sm-4">
-        <div class="row">
-          <div class="col-xs-6 col-sm-12 col-md-12 m-b-10"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sinema.png" class="img-responsive" alt="Sinema" style="max-height: 306px;" /></div>
-          <div class="col-xs-6 col-sm-12 col-md-12"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/kampanya.png" class="img-responsive" alt="Kampanya" style="max-height: 306px;" /></div>
-        </div>
+      <div class="col-xs-12 col-sm-4 top-right">
+
+          <div class="m-b-10 box1">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/sinema.png" class="img-responsive m-l-auto m-r-auto" alt="Sinema" style="max-height: 306px;" />
+			</div>
+          <div class="box2">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kampanya.png" class="img-responsive m-l-auto m-r-auto" alt="Kampanya" style="max-height: 306px;" />
+			</div>
+
       </div>
     </div>
   </div>
@@ -86,18 +108,13 @@ if ( $ana_sayfa_slide_alt_query->have_posts() ){
 </section>
 <section>
   <div class="container-fluid">
-    <div class="row m-t-10">
+    <div class="row m-t-10 m-b-20">
       <div class="col-xs-12">
-        <div class="panel-izmirpark text-center m-b-10 m-t-10"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bullet-yellow.png" style="margin-right: 75px" /> <span class="panel-title-izmirpark">Mağazalar</span> <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bullet-yellow.png" style="margin-left: 75px" /></div>
-        <div class="slide-magaza-logolari">
-          <div class="slide"><img src="http://placehold.it/300x150&text=Mağaza1"></div>
-          <div class="slide"><img src="http://placehold.it/300x150&text=Mağaza2"></div>
-          <div class="slide"><img src="http://placehold.it/300x150&text=Mağaza3"></div>
-          <div class="slide"><img src="http://placehold.it/300x150&text=Mağaza4"></div>
-          <div class="slide"><img src="http://placehold.it/300x150&text=Mağaza5"></div>
-          <div class="slide"><img src="http://placehold.it/300x150&text=Mağaza6"></div>
-          <div class="slide"><img src="http://placehold.it/300x150&text=Mağaza7"></div>
-          <div class="slide"><img src="http://placehold.it/300x150&text=Mağaza8"></div>
+        <div class="panel-izmirpark text-center m-b-10 m-t-10"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bullet-yellow.png" class="bullet-left" /> <span class="panel-title-izmirpark">Mağaza Arşivi</span> <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bullet-yellow.png" class="bullet-right" /></div>
+        <div class="slide-magaza-arsivi">
+        <?php foreach($magazalar as $key => $magaza){ ?>
+          <div class="slide"><a href="<?php echo $magaza['url']; ?>"><?php echo $magaza['thumbnail-s']; ?></a></div>
+          <?php } ?>
         </div>
       </div>
     </div>
