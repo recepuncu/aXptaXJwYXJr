@@ -125,7 +125,7 @@ if ( $magazalar_query->have_posts() ){
     <div id="anasayfa-slide-alt" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
 			<?php foreach($ana_sayfa_slide_alt as $key => $slide){ ?>
-            <li data-target="#anasayfa-slide-ust" data-slide-to="<?php echo $key; ?>" class="<?php echo $key==0?'active':''; ?>"></li>
+            <li data-target="#anasayfa-slide-alt" data-slide-to="<?php echo $key; ?>" class="<?php echo $key==0?'active':''; ?>"></li>
             <?php } ?>
           </ol>
           <div class="carousel-inner" role="listbox">
