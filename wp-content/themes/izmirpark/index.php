@@ -34,6 +34,12 @@ if ( is_front_page() ){
 }elseif ( is_page( 'Kulüpler' ) ){
     get_template_part( 'template-parts/kulupler', 'Kulüpler' );	
 	
+}elseif ( is_page( 'Bizden Haberler' ) ){
+    get_template_part( 'template-parts/bizden-haberler', 'Bizden Haberler' );		
+	
+}elseif ( is_page( 'Basında İzmir Park' ) ){
+    get_template_part( 'template-parts/basinda-izmirpark-haberleri', 'Basında İzmir Park' );	
+	
 }elseif ( is_page() ){ //Diğer Sayfalar
     get_template_part( 'template-parts/sayfa', 'Sayfa' );		
 	
@@ -57,6 +63,12 @@ if ( is_front_page() ){
 	}	
 	elseif($post_type=='magaza'){
 		get_template_part( 'template-parts/magaza', 'Mağaza' );
+	}
+	elseif($post_type=='bizden-haber'){
+		get_template_part( 'template-parts/bizden-haber', 'Bizden Haber' );
+	}
+	elseif($post_type=='basinda-izmirpark'){
+		get_template_part( 'template-parts/basinda-izmirpark-haber', 'Basında İzmir Park' );
 	}
 }
 

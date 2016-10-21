@@ -1,6 +1,16 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 }
+.table.no-border>tbody>tr>td, .table.no-border>tbody>tr>th, .table.no-border>tfoot>tr>td, .table.no-border>tfoot>tr>th, .table.no-border>thead>tr>td, .table.no-border>thead>tr>th {
+	border-top: 0;
+}
+.news-title-1 {
+	display: block;
+	font-size: 16px;
+	font-weight: 600;
+	color: #e20071;
+	text-align: center;
+}
 .bx-wrapper {
 	margin: 0 auto 20px;
 }
@@ -11,6 +21,17 @@ body {
 }
 footer.main-footer {
 	background-color: #141414;
+}
+footer.main-footer div.wpcf7-validation-errors,
+footer.main-footer div.wpcf7-response-output {
+	color: yellow;
+	margin-top: 0;
+}
+footer.main-footer .wpcf7-not-valid-tip {
+	position: absolute;
+	z-index: 2;
+	top: 10px;
+	left: -133px;
 }
 .bullet-left {
 	margin-right: 75px;
@@ -38,11 +59,11 @@ div.footer-abone-ol {
 	padding: 3px;
 	margin-top: -10px;
 }
-div.footer-abone-ol input[type="text"] {
+div.footer-abone-ol input[type="text"], div.footer-abone-ol input[type="email"] {
 	background-color: #141414;
 	border-color: #141414;
 }
-div.footer-abone-ol button, div.footer-abone-ol button:hover, div.footer-abone-ol button:active, div.footer-abone-ol button:focus {
+div.footer-abone-ol button, div.footer-abone-ol button:hover, div.footer-abone-ol button:active, div.footer-abone-ol button:focus, div.footer-abone-ol input[type="submit"], div.footer-abone-ol input[type="submit"]:hover, div.footer-abone-ol input[type="submit"]:active, div.footer-abone-ol input[type="submit"]:focus {
 	background-color: #323030;
 	border-color: #323030;
 	color: #f5f5f5;
@@ -90,8 +111,8 @@ div.magaza-logo, div.magaza-logo>* {
 }
 div.magaza-ozet, div.magaza-ozet>* {
 	display: block;
-    text-align: center;
-    white-space: nowrap;    
+	text-align: center;
+	white-space: nowrap;
 }
 div.magaza-logo, div.magaza-logo img {
 	margin-left: auto;
@@ -206,13 +227,10 @@ div.magaza-afis-orta {
 	border-radius: 0px;
 }
 .navbar-izmirpark .navbar-header {
-
 }
 .navbar-izmirpark .navbar-collapse {
-
 }
 .navbar-izmirpark .navbar-nav.navbar-right>li>a {
-
 }
 .navbar-izmirpark .navbar-nav>li>a {
 	color: #000000;

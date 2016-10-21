@@ -83,10 +83,10 @@ if ( $magazalar_query->have_posts() ){
       <div class="col-xs-12 col-sm-4 top-right">
 
           <div class="m-b-10 box1">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/sinema.png" class="img-responsive m-l-auto m-r-auto" alt="Sinema" style="max-height: 306px;" />
+			<a href="./sinemalar"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sinema.png" class="img-responsive m-l-auto m-r-auto" alt="Sinema" style="max-height: 306px;" /></a>
 			</div>
           <div class="box2">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kampanya.png" class="img-responsive m-l-auto m-r-auto" alt="Kampanya" style="max-height: 306px;" />
+			<a href="./kampanyalar"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/kampanya.png" class="img-responsive m-l-auto m-r-auto" alt="Kampanya" style="max-height: 306px;" /></a>
 			</div>
 
       </div>

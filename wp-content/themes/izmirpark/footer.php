@@ -16,13 +16,8 @@
             ?>          
         </ul>
       </div>
-      <div class="col-xs-12 col-sm-4">
-        <div class="input-group footer-abone-ol">
-          <input type="text" class="form-control" placeholder="E-Mail adresiniz" autocomplete="off" />
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button">ABONE OL</button>
-          </span>
-        </div> 
+      <div class="col-xs-12 col-sm-4">         
+        <?php echo do_shortcode( '[contact-form-7 id="168" title="Abone Ol"]' ); ?>
       </div>
     </div>
     <div class="text-center p-0 m-0 m-b-20">

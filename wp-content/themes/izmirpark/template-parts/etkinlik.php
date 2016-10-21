@@ -14,13 +14,7 @@ $etkinlik = array(
 	'title'=> get_the_title(), 
 	'thumbnail'=> $thumbnail ? $thumbnail[0] : null,
 	'thumbnail-s'=> get_the_post_thumbnail($post->ID, array(170, 242)),
-	'url'=> get_post_permalink(),
-	'dil'=> get_post_meta($post->ID, 'dil', true),
-	'sure'=> get_post_meta($post->ID, 'sure', true),
-	'salon'=> get_post_meta($post->ID, 'salon', true),
-	'seanslar'=> get_post_meta($post->ID, 'seanslar', true),
-	'bilet_alma_adresi'=> get_post_meta($post->ID, 'bilet_alma_adresi', true),
-	'fragman_adresi'=> get_post_meta($post->ID, 'fragman_adresi', true)
+	'url'=> get_post_permalink()	
 );
 
 ?>
@@ -39,7 +33,7 @@ $etkinlik = array(
 				<footer><?php echo wpautop($post->post_content); ?></footer>
 			</blockquote>			
 		</div>
-	</div>
+	</div>    
 </div>
 </article>
 

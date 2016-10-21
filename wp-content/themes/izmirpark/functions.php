@@ -7,7 +7,7 @@ function izmirpark_setup() {
 	load_theme_textdomain( 'izmirpark' );
 
 	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'title-tag' );	
+	add_theme_support( 'title-tag' );
 	add_theme_support( 'custom-logo', array(
 		'height'      => 270,
 		'width'       => 75,
@@ -64,6 +64,12 @@ function create_posttype() {
 	register_post_type( 'magaza',		
 		return_post_type_args('Mağazalar', 'Mağaza', 'magaza', 'dashicons-store', array('category'))
 	);
+	register_post_type( 'bizden-haber',		
+		return_post_type_args('Bizden Haberler', 'Bizden Haber', 'bizden-haber', 'dashicons-media-document')
+	);
+	register_post_type( 'basinda-izmirpark',		
+		return_post_type_args('Basında İzmir Park', 'Basında İzmir Park', 'basinda-izmirpark', 'dashicons-megaphone')
+	);	
 }
 add_action( 'init', 'create_posttype', 0);
 
